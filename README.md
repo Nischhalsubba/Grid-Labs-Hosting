@@ -1,3 +1,7 @@
+<div align="center">
+<img width="100%" height = "" src="https://i.imgur.com/mzrijzI.jpg" alt="cover" />
+</div>
+
 # Project Title
 
 Grid Labs Hosting Website
