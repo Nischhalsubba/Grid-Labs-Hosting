@@ -1,28 +1,53 @@
-<div align="center">
-  <img width="100%" src="https://i.imgur.com/mzrijzI.jpg" alt="Grid Labs Hosting website cover preview" />
-</div>
-
-# Grid Labs Hosting
-
 <!-- interactive-readme-standard:start -->
 
-> [!NOTE]
-> **Branch-specific documentation:** this section is maintained for [`main`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main). It is generated from the files present on this branch and preserves the project-authored README below.
+<div align="center">
 
-<details open>
-<summary><strong>Interactive repository guide</strong></summary>
+# Grid-Labs-Hosting
 
-## Branch overview
+**Branch-aware technical guide for [`main`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main)**
 
-| Item | Value |
+<p><img alt="branch: main" src="https://img.shields.io/static/v1?label=&message=branch%3A%20main&color=5965F2&style=flat-square"> <img alt="Sass" src="https://img.shields.io/static/v1?label=&message=Sass&color=24292F&style=flat-square"> <img alt="CSS" src="https://img.shields.io/static/v1?label=&message=CSS&color=24292F&style=flat-square"> <img alt="JavaScript" src="https://img.shields.io/static/v1?label=&message=JavaScript&color=24292F&style=flat-square"> <img alt="HTML" src="https://img.shields.io/static/v1?label=&message=HTML&color=24292F&style=flat-square"> <img alt="license detected" src="https://img.shields.io/static/v1?label=&message=license%20detected&color=2DA44E&style=flat-square"> <img alt="docs: branch-aware" src="https://img.shields.io/static/v1?label=&message=docs%3A%20branch-aware&color=8250DF&style=flat-square"></p>
+
+<p>
+  <a href="https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main"><strong>Browse source</strong></a> ·
+  <a href="https://github.com/Nischhalsubba/Grid-Labs-Hosting/issues"><strong>Issues</strong></a> ·
+  <a href="https://github.com/Nischhalsubba/Grid-Labs-Hosting/codespaces/new?ref=main"><strong>Open in Codespaces</strong></a>
+</p>
+
+</div>
+
+> [!IMPORTANT]
+> This guide is generated from the files actually present on `main`. It links to detected source paths, preserves project-authored notes, and avoids claiming components that were not found.
+
+## At a glance
+
+| Item | Detected value |
 |---|---|
-| Repository | [`Nischhalsubba/Grid-Labs-Hosting`](https://github.com/Nischhalsubba/Grid-Labs-Hosting) |
-| Branch | [`main`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main) |
-| Detected stack | Sass, CSS, JavaScript, HTML |
-| Detected manifests | No standard manifest detected |
-| Documentation policy | Every maintained branch must explain purpose, setup, structure, architecture, flows, testing, delivery, security, and ownership. |
+| Purpose | A Sass project documented from the current branch structure and manifests. |
+| Branch role | Default branch |
+| Stack | Sass, CSS, JavaScript, HTML |
+| Manifests | No standard manifest detected |
+| Prerequisites | Confirm from the detected manifests |
+| Delivery | GitHub Actions |
+| License | LICENSE |
 
-## Repository structure
+## Branch scope
+
+This is the repository's default branch.
+
+
+
+## Quick start
+
+> No reliable setup command was detected. Use the preserved project-authored notes and manifests rather than guessing.
+
+### Configuration surface
+
+- No committed environment example file was detected.
+
+> Never commit secrets, private keys, production credentials, customer data, or unredacted infrastructure details.
+
+## Repository map
 
 ```mermaid
 flowchart TD
@@ -40,51 +65,134 @@ flowchart TD
     ROOT --> P10["LICENSE"]
 ```
 
-The diagram is generated from the branch's actual top-level files and directories. Use the branch link above for complete source navigation.
+| Responsibility | Detected source paths |
+|---|---|
+| Documentation | [`docs`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main/docs) |
+| Delivery | [`.github`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main/.github) |
 
-## Website or application structure
+## Website or application map
 
 ```mermaid
 flowchart TD
     APP["Grid-Labs-Hosting"]
     APP --> SOURCE["No conventional route directory detected"]
-    SOURCE --> VERIFY["Inspect the project-specific documentation below"]
+    SOURCE --> GUIDE["Use the repository and architecture maps below"]
 ```
 
-## Application and responsibility flow
+## Architecture and responsibility flow
 
 ```mermaid
 flowchart LR
-    ACTOR["User / contributor"]
-    ACTOR --> A0["Documentation: docs"]
+    USER["User / contributor"]
+    USER --> A0["Documentation: docs"]
     A0 --> A1["Delivery: .github"]
     A1 --> DELIVERY["Delivery: GitHub Actions"]
 ```
 
-## Change-to-delivery flow
+
+
+## Quality, security, and operations
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### Quality
+
+- No conventional test directory was detected automatically.
+
+Detected commands:
+- No standard quality command detected.
+
+</td>
+<td width="33%" valign="top">
+
+### Security
+
+- No dedicated security policy or automated dependency configuration was detected.
+
+Review authentication, authorization, input validation, dependency updates, secret handling, and failure recovery before release.
+
+</td>
+<td width="34%" valign="top">
+
+### Observability
+
+- No dedicated observability integration was detected automatically.
+
+Define useful logs, metrics, traces, alerts, and rollback signals for production-facing branches.
+
+</td>
+</tr>
+</table>
+
+## Delivery flow
 
 ```mermaid
 flowchart LR
-    CHANGE["Change on main"]
-    CHECK["Validate: Project-specific validation"]
-    REVIEW["Review documentation and architecture impact"]
-    RELEASE["Merge, release, or deploy according to this branch"]
-    CHANGE --> CHECK --> REVIEW --> RELEASE
+    CHANGE["Change on main"] --> CHECK["Tests and quality checks"]
+    CHECK --> REVIEW["Review architecture and documentation impact"]
+    REVIEW --> BUILD["Build or package"]
+    BUILD --> DEPLOY["Deploy or release"]
+    DEPLOY --> VERIFY["Verify health and rollback readiness"]
 ```
 
-## README requirements for this branch
+### Automation detected
 
-- Explain what this branch contains and how it differs from the default branch.
-- Keep installation, configuration, usage, testing, deployment, security, support, and license information accurate.
-- Document repository, website or application, API, data, authentication, background-job, and deployment flows when they exist.
-- Prefer Mermaid diagrams and expandable `<details>` sections for visual navigation.
-- Link diagrams and modules to real source paths; never invent missing components.
-- Preserve project-specific documentation and update diagrams whenever architecture or major paths change.
-- Treat secrets, private infrastructure, customer data, and credentials as prohibited README content.
+- [`.github/workflows/apply-interactive-readme.yml`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/blob/main/.github/workflows/apply-interactive-readme.yml)
+
+## Contribution flow
+
+```mermaid
+flowchart LR
+    FORK["Create branch"] --> CHANGE["Make focused change"]
+    CHANGE --> TEST["Run relevant checks"]
+    TEST --> DOCS["Update README and diagrams"]
+    DOCS --> PR["Open pull request"]
+    PR --> REVIEW["Review and iterate"]
+    REVIEW --> MERGE["Merge when ready"]
+```
+
+- Keep changes focused and explain architectural consequences.
+- Run the checks relevant to the changed area.
+- Update diagrams whenever routes, modules, data models, authentication, jobs, or delivery paths change.
+- Add screenshots or recordings for visual behavior changes when useful.
+- Use issues for reproducible defects and pull requests for reviewable changes.
+
+## Ownership and support
+
+| Topic | Source |
+|---|---|
+| Repository | [`Nischhalsubba/Grid-Labs-Hosting`](https://github.com/Nischhalsubba/Grid-Labs-Hosting) |
+| Branch | [`main`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/tree/main) |
+| Ownership | No CODEOWNERS file detected |
+| Contributing | Use the contribution flow above |
+| Support | [Open or review issues](https://github.com/Nischhalsubba/Grid-Labs-Hosting/issues) |
+| License | [`LICENSE`](https://github.com/Nischhalsubba/Grid-Labs-Hosting/blob/main/LICENSE) |
+
+<details>
+<summary><strong>Documentation maintenance checklist</strong></summary>
+
+- [ ] Purpose and branch scope are accurate.
+- [ ] Setup and configuration commands still work.
+- [ ] Repository, application, API, data, authentication, job, and deployment diagrams match the code.
+- [ ] Tests, security controls, observability, and rollback behavior are documented.
+- [ ] Links point to real files on this branch.
+- [ ] No secrets or private operational details are exposed.
 
 </details>
 
 <!-- interactive-readme-standard:end -->
+
+<!-- project-authored-notes:start -->
+<details>
+<summary><strong>Project-authored notes preserved from this branch</strong></summary>
+
+<div align="center">
+  <img width="100%" src="https://i.imgur.com/mzrijzI.jpg" alt="Grid Labs Hosting website cover preview" />
+</div>
+
+# Grid Labs Hosting
 
 > A Bootstrap-based static landing page for a hosting / technology services company, featuring domain search, hosting service cards, feature sections, testimonials, pricing tabs, FAQ-style support content, and a contact form UI.
 
@@ -410,3 +518,6 @@ No build step is required if the repo is deployed as static HTML/CSS/JS.
 ## License
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for more information.
+
+</details>
+<!-- project-authored-notes:end -->
