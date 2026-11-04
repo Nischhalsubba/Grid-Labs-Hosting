@@ -63,4 +63,3 @@ function fadeIn() {
     }
   }, 200);
 }
-window.onload(typewrite());

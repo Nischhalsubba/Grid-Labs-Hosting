@@ -21,8 +21,48 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Verify static entry points
-        run: test -f site/index.html && test -d site/css && test -d site/js
+      - name: Verify static entry points, local assets and JavaScript syntax
+        run: |
+          test -f index.html
+          test -f css/style.css
+          test -f js/app.js
+          test -f images/favicon.ico
+          node --check js/app.js
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          class AssetReferences(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.paths = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag in ('img', 'script'):
+                      self.paths.append(attrs.get('src', ''))
+                  elif tag == 'link':
+                      self.paths.append(attrs.get('href', ''))
+                  elif tag == 'a' and attrs.get('href', '').endswith('.html'):
+                      self.paths.append(attrs['href'])
+
+          parser = AssetReferences()
+          parser.feed(Path('index.html').read_text(encoding='utf-8'))
+          missing = []
+          for value in parser.paths:
+              if not value or value.startswith(('#', 'data:', 'mailto:', 'tel:', '//')):
+                  continue
+              parsed = urlsplit(value)
+              if parsed.scheme or parsed.netloc:
+                  continue
+              path = unquote(parsed.path)
+              if path.startswith('/') or (path and not Path(path).is_file()):
+                  missing.append(value)
+          if missing:
+              raise SystemExit('Missing or root-absolute local assets: ' + ', '.join(missing))
+          print('HTML local assets verified')
+          PY
       - name: Configure GitHub Pages
         if: github.event_name == 'push'
         uses: actions/configure-pages@v5
@@ -30,7 +70,7 @@ jobs:
         if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: .
 
   deploy:
     if: github.event_name == 'push'

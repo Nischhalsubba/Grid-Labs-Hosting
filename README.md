@@ -59,7 +59,17 @@ git clone https://github.com/Nischhalsubba/Grid-Labs-Hosting.git
 cd Grid-Labs-Hosting
 ```
 
-Use the manifests and lockfiles in the repository to determine current setup commands.
+Open `index.html` or run `python3 -m http.server 8000` from the repository root and visit `http://localhost:8000/`. No build step is needed.
+
+## GitHub Pages
+
+The static site is stored at the **repository root**: `index.html`, `css/`, `js/`, `images/`, and `fonts/`. Asset URLs are relative, so the project also works at `https://nischhalsubba.github.io/Grid-Labs-Hosting/`.
+
+The workflow in `.github/workflows/quality.yml` validates the site on pull requests and deploys the repository root on pushes to `main`.
+
+In **Repository Settings → Pages → Build and deployment**, use **GitHub Actions** for the workflow above. Alternatively, to deploy directly from a branch without the Actions deployment, choose **Deploy from a branch → main → / (root)**. Do not rely on the old `site/` directory.
+
+A root `.nojekyll` file allows GitHub Pages to serve the original static assets without Jekyll processing.
 
 ## Design & trust
 
