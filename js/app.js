@@ -1,20 +1,16 @@
-//  Window scroll sticky class add
+// Keep the navbar sticky without cancelling (non-cancellable) scroll events.
 function windowScroll() {
   const navbar = document.getElementById("navbar");
-  if (
+  if (!navbar) return;
+
+  const isScrolled =
     document.body.scrollTop >= 50 ||
-    document.documentElement.scrollTop >= 50
-  ) {
-    navbar.classList.add("is-sticky");
-  } else {
-    navbar.classList.remove("is-sticky");
-  }
+    document.documentElement.scrollTop >= 50;
+  navbar.classList.toggle("is-sticky", isScrolled);
 }
 
-window.addEventListener("scroll", (ev) => {
-  ev.preventDefault();
-  windowScroll();
-});
+window.addEventListener("scroll", windowScroll, { passive: true });
+windowScroll();
 
 // Contact Form
 function validateForm() {
