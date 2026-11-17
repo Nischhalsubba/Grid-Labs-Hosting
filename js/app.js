@@ -44,6 +44,14 @@ function validateForm() {
     fadeIn();
     return false;
   }
+  // Static hosting has no form endpoint: open a real draft instead of silently
+  // discarding the visitor's enquiry. The visitor must send it in their mail app.
+  var body = ["Name: " + name, "Email: " + email, "", comments].join("\n");
+  var mailto = "mailto:hello@gridlabs.com?subject=" + encodeURIComponent(subject)
+    + "&body=" + encodeURIComponent(body);
+  var status = document.getElementById("simple-msg");
+  if (status) status.textContent = "Your email app will open with a draft. Send it there to complete your message.";
+  window.location.href = mailto;
   return false;
 }
 
