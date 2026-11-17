@@ -14,10 +14,10 @@ windowScroll();
 
 // Contact Form
 function validateForm() {
-  var name = document.forms["myForm"]["name"].value;
-  var email = document.forms["myForm"]["email"].value;
-  var subject = document.forms["myForm"]["subject"].value;
-  var comments = document.forms["myForm"]["comments"].value;
+  var name = document.forms["myForm"]["name"].value.trim();
+  var email = document.forms["myForm"]["email"].value.trim();
+  var subject = document.forms["myForm"]["subject"].value.trim();
+  var comments = document.forms["myForm"]["comments"].value.trim();
   document.getElementById("error-msg").style.opacity = 0;
   document.getElementById("error-msg").innerHTML = "";
   if (name == "" || name == null) {
