@@ -85,3 +85,7 @@ Use accurate terms such as **web hosting, hosting plans, website hosting, hostin
 flowchart LR
     CHANGE["Plan / UI change"] --> VERIFY["Verify claims"] --> BUILD["Implement"] --> RESPONSIVE["Responsive + accessibility review"] --> SEO["Metadata check"] --> PR["Pull request"]
 ```
+
+## Publication quality guide
+
+Use the [project-specific content and verification guide](docs/HOSTING_CLAIM_REVIEW.md) to check source accuracy, visitor-facing interactions, accessibility and release corrections.
