@@ -86,6 +86,8 @@ flowchart LR
     CHANGE["Plan / UI change"] --> VERIFY["Verify claims"] --> BUILD["Implement"] --> RESPONSIVE["Responsive + accessibility review"] --> SEO["Metadata check"] --> PR["Pull request"]
 ```
 
-## Maintainer review checklist
+## Publication quality guide
 
-Before changing critical product behavior or public claims, use the [Hosting offer verification](docs/HOSTING_OFFER_VERIFICATION.md) to record evidence, verification and rollback expectations.
+Use the [project-specific content and verification guide](docs/HOSTING_CLAIM_REVIEW.md) to check source accuracy, visitor-facing interactions, accessibility and release corrections.
+
+For plan pricing, renewal terms, reliability claims and customer-facing offer verification, consult the [hosting-offer accuracy checklist](docs/HOSTING_OFFER_VERIFICATION.md).
