@@ -85,3 +85,7 @@ Use accurate terms such as **web hosting, hosting plans, website hosting, hostin
 flowchart LR
     CHANGE["Plan / UI change"] --> VERIFY["Verify claims"] --> BUILD["Implement"] --> RESPONSIVE["Responsive + accessibility review"] --> SEO["Metadata check"] --> PR["Pull request"]
 ```
+
+## Delivery and review procedure
+
+See [document hosting offer claims and deployment release controls](./docs/HOSTING_OFFER_AND_RELEASE_CONTROLS.md) for repository-specific change acceptance, evidence requirements, and rollback procedures.
