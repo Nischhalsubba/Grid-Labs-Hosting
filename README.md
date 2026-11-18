@@ -89,3 +89,5 @@ flowchart LR
 ## Publication quality guide
 
 Use the [project-specific content and verification guide](docs/HOSTING_CLAIM_REVIEW.md) to check source accuracy, visitor-facing interactions, accessibility and release corrections.
+
+For plan pricing, renewal terms, reliability claims and customer-facing offer verification, consult the [hosting-offer accuracy checklist](docs/HOSTING_OFFER_VERIFICATION.md).
