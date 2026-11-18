@@ -85,3 +85,7 @@ Use accurate terms such as **web hosting, hosting plans, website hosting, hostin
 flowchart LR
     CHANGE["Plan / UI change"] --> VERIFY["Verify claims"] --> BUILD["Implement"] --> RESPONSIVE["Responsive + accessibility review"] --> SEO["Metadata check"] --> PR["Pull request"]
 ```
+
+## Maintainer review checklist
+
+Before changing critical product behavior or public claims, use the [Hosting offer verification](docs/HOSTING_OFFER_VERIFICATION.md) to record evidence, verification and rollback expectations.
